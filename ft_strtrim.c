@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 17:02:30 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/16 10:28:10 by jomaia           ###   ########.fr       */
+/*   Created: 2025/04/16 11:46:23 by jomaia            #+#    #+#             */
+/*   Updated: 2025/04/16 17:35:12 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *str;
-	size_t strlen;
+	size_t	start;
+	size_t	end;
+	char	*str;
 
-	strlen = ft_strlen((char *) s);
-	if(start >= strlen)
-		return (ft_strdup(""));
-	if (len > strlen - start)
-		len = strlen - start;
-	str = ft_calloc(len + 1, sizeof(char));
-	if(!str)
+	start = 0;
+	end = ft_strlen(s1);
+	if(!s1 || !set)
 		return(NULL);
-	ft_strlcpy(str, &s[start], len + 1);
-	return (str);
+	while(ft_strchr(set, s1[start]))
+		start++;
+	while(ft_strrchr(set, s1[end]))
+		end--;
+	str = ft_substr(s1, start, end - start + 1);
+	return(str);
 }
-/*
-int main()
-{
-	printf("%s", ft_substr("ololaa", 0, 0));
-}*/
+int main(){
+	printf("%s", ft_strtrim("   xxxtripouille", " x"));
+
+}
