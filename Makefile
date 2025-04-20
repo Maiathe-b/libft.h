@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+         #
+#    By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 12:44:02 by jomaia            #+#    #+#              #
-#    Updated: 2025/04/16 17:09:15 by jomaia           ###   ########.fr        #
+#    Updated: 2025/04/20 15:38:24 by joaomaia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
 		ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c\
 		ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c\
 		ft_strrchr.c ft_tolower.c ft_toupper.c ft_substr.c ft_strjoin.c\
-		ft_strtrim.c
+		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+		ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
 COMP_LIB = ar -rcs
 RM= rm -f
 CC= cc

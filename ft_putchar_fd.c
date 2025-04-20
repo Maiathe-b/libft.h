@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 11:01:18 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/15 15:48:45 by jomaia           ###   ########.fr       */
+/*   Created: 2025/04/20 15:21:27 by joaomaia          #+#    #+#             */
+/*   Updated: 2025/04/20 15:24:56 by joaomaia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void    ft_putchar_fd(char c, int fd)
 {
-	char	*ptr;
-
-	if(nmemb == 0 || size == 0)
-		return (malloc(0));
-	if(nmemb > __INT_MAX__ / size)
-		return(NULL);
-	ptr = malloc(nmemb * size);
-	if(!ptr)
-		return(NULL);
-	ft_bzero(ptr, nmemb * size);
-	return(ptr);
+    write(fd, &c, 1);
 }
+
+
+// int main()
+// {
+//     ft_putchar_fd('a', 1);
+// }

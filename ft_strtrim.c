@@ -29,7 +29,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, end - start + 1);
 	return(str);
 }
-int main(){
-	printf("%s", ft_strtrim("   xxxtripouille", " x"));
 
-}
+

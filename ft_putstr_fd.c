@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 11:01:18 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/15 15:48:45 by jomaia           ###   ########.fr       */
+/*   Created: 2025/04/20 15:25:12 by joaomaia          #+#    #+#             */
+/*   Updated: 2025/04/20 15:28:16 by joaomaia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void ft_putstr_fd(char *s, int fd)
 {
-	char	*ptr;
-
-	if(nmemb == 0 || size == 0)
-		return (malloc(0));
-	if(nmemb > __INT_MAX__ / size)
-		return(NULL);
-	ptr = malloc(nmemb * size);
-	if(!ptr)
-		return(NULL);
-	ft_bzero(ptr, nmemb * size);
-	return(ptr);
+    size_t  i;
+    
+    i = 0;
+    while (i < ft_strlen(s))
+    {
+        write(fd, &s[i], 1);
+        i++;
+    }
 }
+
+// int main()
+// {
+//     ft_putstr_fd("abcd", 1);
+// }
