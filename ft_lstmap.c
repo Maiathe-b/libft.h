@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/20 15:28:36 by joaomaia          #+#    #+#             */
-/*   Updated: 2025/04/21 11:14:39 by jomaia           ###   ########.fr       */
+/*   Created: 2025/04/21 14:39:22 by jomaia            #+#    #+#             */
+/*   Updated: 2025/04/21 17:05:54 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del) (void *))
 {
-	size_t	i;
+	t_list	*ptr;
+	t_list	*new;
+	t_list	*res;
 
-	i = 0;
-	while (i < ft_strlen(s))
+	if(!lst || !f || !del)
+		return (NULL);
+	res = NULL;
+	ptr = lst;
+	while(ptr)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		new = ft_lstnew(f(ptr->content));
+		if (!new)
+		{
+			ft_lstclear(&res, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&res, new);
+		ptr = ptr ->next;
 	}
-	write(fd, "\n", 1);
+	return (res);
 }
-
-// int main()
-// {
-//     ft_putendl_fd("abcd", 1);
-// }

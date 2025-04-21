@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:32:14 by joaomaia          #+#    #+#             */
-/*   Updated: 2025/04/20 15:35:13 by joaomaia         ###   ########.fr       */
+/*   Updated: 2025/04/21 11:15:05 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
@@ -32,7 +32,7 @@ void ft_putnbr_fd(int n, int fd)
 			ft_putnbr_fd(n / 10, fd);
 			ft_putnbr_fd(n % 10, fd);
 		}
-		else	
+		else
 			ft_putchar_fd(n + '0', fd);
 	}
 }

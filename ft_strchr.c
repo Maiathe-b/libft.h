@@ -6,7 +6,7 @@
 /*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 15:56:39 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/15 14:43:31 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/21 11:22:32 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while(*s)
+	while (*s)
 	{
-		if(*s == (char) c)
+		if (*s == (char) c)
 			return ((char *)s);
 		s++;
 	}
-	if(*s == c)
+	if (*s == c)
 		return ((char *) s);
 	return (NULL);
 }

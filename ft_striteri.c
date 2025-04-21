@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/20 15:28:36 by joaomaia          #+#    #+#             */
-/*   Updated: 2025/04/21 11:14:39 by jomaia           ###   ########.fr       */
+/*   Created: 2025/04/17 20:32:03 by jomaia            #+#    #+#             */
+/*   Updated: 2025/04/21 11:13:52 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_striteri(char *s, void (*f) (unsigned int, char *))
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
-	while (i < ft_strlen(s))
+	while (s[i])
 	{
-		write(fd, &s[i], 1);
+		f(i, &s[i]);
 		i++;
 	}
-	write(fd, "\n", 1);
 }
 
 // int main()
 // {
-//     ft_putendl_fd("abcd", 1);
+
+// 	char s[] = "abcdef";
+// 	ft_striteri(s, toupp);
+// 	printf("%s", s);
 // }

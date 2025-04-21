@@ -3,22 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:21:27 by joaomaia          #+#    #+#             */
-/*   Updated: 2025/04/20 15:24:56 by joaomaia         ###   ########.fr       */
+/*   Updated: 2025/04/21 11:17:50 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
-
-
-// int main()
-// {
-//     ft_putchar_fd('a', 1);
-// }

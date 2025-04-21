@@ -6,7 +6,7 @@
 /*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:12:33 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/15 15:51:48 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/21 11:29:50 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	str = malloc(ft_strlen(s)+1);
-	if(!str)
+	if (!str)
 		return (NULL);
-	while(s[i])
+	while (s[i])
 	{
 		str[i] = s[i];
 		i++;

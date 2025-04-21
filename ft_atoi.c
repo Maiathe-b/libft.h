@@ -6,7 +6,7 @@
 /*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:53:15 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/15 13:50:17 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/21 11:29:23 by jomaia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,15 @@ int	ft_atoi(const char *nptr)
 
 	num = 0;
 	sign = 1;
-	while(*nptr == ' '|| (*nptr > 8 && *nptr < 14))
+	while (*nptr == ' ' || (*nptr > 8 && *nptr < 14))
 		nptr++;
-	if(*nptr == '-' || *nptr == '+')
+	if (*nptr == '-' || *nptr == '+')
 	{
-			if(*nptr == '-')
-		{
+		if (*nptr == '-')
 			sign = -sign;
-		}
 		nptr++;
 	}
-	while(*nptr >= '0' && *nptr <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
 		num = num * 10;
 		num = num + (*nptr - '0');
@@ -38,19 +36,3 @@ int	ft_atoi(const char *nptr)
 	num = num * sign;
 	return (num);
 }
-
-
-
-// int	main()
-// {
-// 	char arr[] = "-4886";
-// 	char *s;
-// 	s = arr;
-
-
-
-
-// 	printf("%d\n", ft_atoi(s));
-// 	printf("%d\n", atoi(s));
-// 	return (0);
-// }
