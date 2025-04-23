@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:57:36 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/21 15:21:59 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/23 11:50:18 by joaomaia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*last;
 
-	if(!lst)
+	if (!lst)
 		return (NULL);
 	last = lst;
 	while (last->next)

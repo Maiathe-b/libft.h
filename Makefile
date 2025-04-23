@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+         #
+#    By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 12:44:02 by jomaia            #+#    #+#              #
-#    Updated: 2025/04/21 16:57:23 by jomaia           ###   ########.fr        #
+#    Updated: 2025/04/21 17:26:37 by joaomaia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,14 +31,16 @@ ADD = $(SRCS)
 
 all:$(NAME)
 
-bonus: $(BOBJS) $(BSRCS)
+bonus: $(BOBJS)
 	$(COMP_LIB) $(NAME) $(BOBJS)
+	touch bonus
 
 clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(BOBJS)
+	$(RM) bonus
 
 re: fclean all
 

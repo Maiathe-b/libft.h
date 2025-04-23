@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:39:22 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/21 17:05:54 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/23 11:50:34 by joaomaia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del) (void *))
 	t_list	*new;
 	t_list	*res;
 
-	if(!lst || !f || !del)
+	if (!lst || !f || !del)
 		return (NULL);
 	res = NULL;
 	ptr = lst;
-	while(ptr)
+	while (ptr)
 	{
 		new = ft_lstnew(f(ptr->content));
 		if (!new)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 14:14:17 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/21 15:25:58 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/23 11:49:47 by joaomaia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
 
-	if(!lst || !del)
+	if (!lst || !del)
 		return ;
 	current = *lst;
-	while(current)
+	while (current)
 	{
 		*lst = (*lst)->next;
 		ft_lstdelone(current, del);

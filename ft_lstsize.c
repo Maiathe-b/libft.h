@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomaia <jomaia@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: joaomaia <joaomaia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:49:48 by jomaia            #+#    #+#             */
-/*   Updated: 2025/04/21 14:39:02 by jomaia           ###   ########.fr       */
+/*   Updated: 2025/04/23 11:50:44 by joaomaia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	i = 0;
 	current = lst;
-	while(current)
+	while (current)
 	{
 		i++;
 		current = current->next;
